@@ -25,13 +25,21 @@ npm run dev
 
 - FSD
 
+### API for requesting data
+
+- API DummyJSON (https://dummyjson.com/)
+
 ### Building and launching the application
 
 - Docker
 
-### API for requesting data
+```bash
+# build
+docker build -t abelohost-shop .
 
-- API DummyJSON (https://dummyjson.com/)
+# start
+docker run -p 3001:3000 --rm abelohost-shop
+```
 
 ---
 
