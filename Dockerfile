@@ -12,6 +12,8 @@ FROM base AS build
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 
+COPY .env.example .env
+
 RUN npm run build
 
 FROM base AS run

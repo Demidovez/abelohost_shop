@@ -8,6 +8,7 @@ First, run the development server:
 
 ```bash
 npm install
+cp .env.example .env
 npm run dev
 ```
 
