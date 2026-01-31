@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.scss";
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import './globals.scss';
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
+  variable: '--font-montserrat',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "AbeloHost Shop",
-  description: "AbeloHost Shop - best products for your home",
+  title: 'AbeloHost Shop',
+  description: 'AbeloHost Shop - best products for your home',
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
 };
 
@@ -22,9 +22,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
