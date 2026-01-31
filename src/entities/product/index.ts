@@ -1,0 +1,1 @@
+export { useProductsStore } from "./model/store";
