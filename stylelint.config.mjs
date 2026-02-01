@@ -1,6 +1,9 @@
 const stylelintConfig = {
   extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier-scss'],
   plugins: ['stylelint-scss'],
+  rules: {
+    'selector-class-pattern': null,
+  },
 };
 
 export default stylelintConfig;

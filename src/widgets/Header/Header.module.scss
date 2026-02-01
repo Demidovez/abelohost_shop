@@ -1,0 +1,39 @@
+.container {
+  color: #fff;
+  border-bottom: 3px solid #d10125;
+
+  .top_header {
+    background-color: #1e1f29;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .bottom_header {
+    background-color: #15161d;
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+
+      .logo {
+        font-size: 39px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+
+        span + span {
+          color: #d10125;
+        }
+      }
+    }
+  }
+}

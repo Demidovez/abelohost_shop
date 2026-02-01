@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+
 import './globals.scss';
+import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
+
+import { PageContainer } from './_components/PageContainer';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -22,7 +27,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <Header />
+        <PageContainer>{children}</PageContainer>
+        <Footer />
+      </body>
     </html>
   );
 }

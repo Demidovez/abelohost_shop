@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: #d40025;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    opacity: 0.8;
+    font-weight: 600;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:hover span {
+    opacity: 1;
+  }
+}
