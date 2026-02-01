@@ -14,7 +14,7 @@
         white-space: nowrap;
       }
 
-      @media (max-width <= 780px) {
+      @media (width <= 780px) {
         justify-content: flex-end;
 
         .contacts {
@@ -47,12 +47,12 @@
           color: #d10125;
         }
 
-        @media (max-width <= 768px) {
+        @media (width <= 768px) {
           font-size: 24px;
         }
       }
 
-      @media (max-width <= 580px) {
+      @media (width <= 580px) {
         img {
           display: none;
         }

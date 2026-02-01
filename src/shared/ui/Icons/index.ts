@@ -1,4 +1,5 @@
 export { Marker } from './Marker';
+export { Loader } from './Loader';
 export { UserSolid } from './UserSolid';
 export { MenuBurger } from './MenuBurger';
 export { LogoutSolid } from './LogoutSolid';

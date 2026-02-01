@@ -7,13 +7,13 @@
   --html-content-width: auto;
 }
 
-@media (min-width >= 1118px) {
+@media (width >= 1118px) {
   :root {
     --html-content-width: 100vw;
   }
 }
 
-@media (max-width <= 768px) {
+@media (width <= 768px) {
   :root {
     --product-image-size: 250px;
     --products-list-columns: repeat(auto-fill, minmax(250px, 1fr));

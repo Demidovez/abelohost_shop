@@ -2,20 +2,20 @@
 
 import { useEffect } from 'react';
 
+import { PagePlaceholder } from '@/shared/ui/PagePlaceholder';
+
 interface ErrorProps {
   error: Error & { digest?: string };
-  reset: () => void;
 }
 
-export default function Error({ error, reset }: ErrorProps) {
+export default function Error({ error }: ErrorProps) {
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
     <div>
-      <h2>Something went wrong!</h2>
-      <button onClick={reset}>Try again</button>
+      <PagePlaceholder title="Something went wrong!" description={`Error: ${error.message}`} />
     </div>
   );
 }

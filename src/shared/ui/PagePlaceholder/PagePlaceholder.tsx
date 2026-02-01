@@ -5,7 +5,12 @@ import { PATHS } from '@/shared/constants';
 
 import styles from './PagePlaceholder.module.scss';
 
-export const PagePlaceholder = () => {
+interface PagePlaceholderProps {
+  title?: string;
+  description?: string;
+}
+
+export const PagePlaceholder = ({ title, description }: PagePlaceholderProps) => {
   return (
     <div className={styles.container}>
       <Image
@@ -16,8 +21,8 @@ export const PagePlaceholder = () => {
         loading="lazy"
       />
       <div className={styles.description}>
-        <h2>No products found</h2>
-        <p>We couldn&apos;t find any products on this page.</p>
+        <h2>{title || 'No products found'}</h2>
+        <p>{description || "We couldn't find any products on this page."}</p>
         <Link href={PATHS.home}>
           <span>Go to Home</span>
         </Link>

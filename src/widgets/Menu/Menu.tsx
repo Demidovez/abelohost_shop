@@ -28,7 +28,6 @@ export const Menu = () => {
         <div className={styles.menu}>
           <MenuBurger
             onClick={() => {
-              throw new Error('test error');
               setIsMenuOpen((state) => !state);
             }}
           />

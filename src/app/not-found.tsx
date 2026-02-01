@@ -1,12 +1,12 @@
-import { Button } from '@/shared/ui/Button';
+import { PagePlaceholder } from '@/shared/ui/PagePlaceholder';
 
 export default function NotFound() {
   return (
     <div>
-      <h2>404 - Page Not Found</h2>
-      <Button>
-        <span>Go to Home</span>
-      </Button>
+      <PagePlaceholder
+        title="404 - Page Not Found"
+        description="We couldn't find any page with this URL."
+      />
     </div>
   );
 }
