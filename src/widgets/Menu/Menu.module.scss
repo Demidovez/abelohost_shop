@@ -1,5 +1,9 @@
 .container {
   border-bottom: 2px solid #e5e9ee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
 
   ul {
     margin: 0;
@@ -22,6 +26,10 @@
       }
 
       &:hover span {
+        border-bottom-color: #363b60;
+      }
+
+      &.active span {
         border-bottom-color: #363b60;
       }
     }
