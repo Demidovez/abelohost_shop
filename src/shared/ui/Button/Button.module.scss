@@ -1,0 +1,23 @@
+.container {
+  font-family: var(--font-accent);
+  padding: 12px 15px;
+  border-radius: 3px;
+  background-color: #15161d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: #363b60;
+  }
+
+  &[data-loading='true'] {
+    opacity: 0.8;
+    cursor: wait;
+  }
+}

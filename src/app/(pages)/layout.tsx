@@ -8,7 +8,7 @@ import { Header } from '@/widgets/Header';
 import { Menu } from '@/widgets/Menu';
 
 const montserrat = Montserrat({
-  variable: '--font-montserrat',
+  variable: '--font-accent',
   subsets: ['latin'],
 });
 
