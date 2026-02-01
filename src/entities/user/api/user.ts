@@ -15,7 +15,7 @@ class UserApiClient extends BaseApiClient {
   }
   async logout(): Promise<AxiosResponse> {
     const response = await this.client.get<AxiosResponse>('/logout');
-    return response.data;
+    return response;
   }
 }
 
