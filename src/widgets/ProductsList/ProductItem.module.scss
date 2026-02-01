@@ -8,12 +8,20 @@
   padding: 15px 0;
   gap: 8px;
 
+  .image {
+    width: var(--product-image-size);
+    height: var(--product-image-size);
+    position: relative;
+  }
+
   .description {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    width: 100%;
+    overflow: hidden;
 
     h4 {
       font-size: 15px;
@@ -32,6 +40,26 @@
       font-weight: 700;
       color: #d1051d;
       letter-spacing: -0.3px;
+    }
+
+    h4,
+    p,
+    span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+
+  .button {
+    padding: 0 20px;
+    width: 100%;
+
+    svg {
+      margin-right: 10px;
     }
   }
 }

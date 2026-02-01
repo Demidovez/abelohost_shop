@@ -1,6 +1,23 @@
 :root {
   --background: #fff;
   --foreground: #171717;
+  --product-image-size: 350px;
+  --products-list-columns: repeat(auto-fill, minmax(350px, 1fr));
+  --max-content-width: 1118px;
+  --html-content-width: auto;
+}
+
+@media (min-width >= 1118px) {
+  :root {
+    --html-content-width: 100vw;
+  }
+}
+
+@media (max-width <= 768px) {
+  :root {
+    --product-image-size: 250px;
+    --products-list-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 html,
@@ -10,7 +27,7 @@ body {
 }
 
 html {
-  width: 100vw;
+  width: var(--html-content-width);
 }
 
 body {

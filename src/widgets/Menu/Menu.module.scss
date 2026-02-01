@@ -35,4 +35,47 @@
       }
     }
   }
+
+  .menu {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: -10px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width <= 780px) {
+    .menu {
+      display: flex;
+    }
+
+    ul {
+      flex-direction: column;
+      padding-bottom: 20px;
+      display: none;
+
+      &[data-open='true'] {
+        display: flex;
+      }
+
+      li a {
+        padding: 3px 0;
+        font-size: 18px;
+
+        span {
+          border-bottom: none;
+        }
+
+        &.active span {
+          font-weight: 800;
+        }
+      }
+    }
+  }
 }

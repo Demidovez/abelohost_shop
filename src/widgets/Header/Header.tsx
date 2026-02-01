@@ -13,7 +13,7 @@ export const Header = () => {
     <header className={styles.container}>
       <div className={styles.top_header}>
         <ContentContainer className={styles.content}>
-          <Contacts />
+          <Contacts className={styles.contacts} />
           <UserBar />
         </ContentContainer>
       </div>

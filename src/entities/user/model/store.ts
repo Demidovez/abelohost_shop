@@ -31,3 +31,8 @@ export const useUserStore = create<UserState>((set) => ({
     set({ user: data ?? null });
   },
 }));
+
+export const useIsAuth = () => {
+  const { user } = useUserStore();
+  return Boolean(user?.email);
+};

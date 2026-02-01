@@ -21,9 +21,16 @@ const CONTACTS = [
   },
 ];
 
-export const Contacts = () => {
+interface ContactsProps {
+  direction?: 'row' | 'column';
+  className?: string;
+}
+
+export const Contacts = (props: ContactsProps) => {
+  const { direction = 'row', className } = props;
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`} data-direction={direction}>
       {CONTACTS.map((contact, index) => (
         <LinkWithIcon
           key={index}
