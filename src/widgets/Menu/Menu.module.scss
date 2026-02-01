@@ -9,14 +9,15 @@
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 21px;
+    margin-bottom: -2px;
 
     li a {
       display: block;
       padding: 23px 0;
       font-size: 14px;
       font-weight: 600;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.3px;
       color: #363b60;
 
       span {

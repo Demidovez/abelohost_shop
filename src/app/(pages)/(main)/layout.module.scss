@@ -1,8 +1,10 @@
 .container {
-  padding-top: 30px;
+  padding-top: 34px;
 
-  .title {
-    font-size: 24px;
+  & > h1 {
+    font-size: 27px;
     font-weight: 700;
+    letter-spacing: -0.2px;
+    margin: 0;
   }
 }

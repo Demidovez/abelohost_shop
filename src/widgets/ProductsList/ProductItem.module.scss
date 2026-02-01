@@ -1,0 +1,37 @@
+.container {
+  border: 1px solid #eaedf2;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  gap: 8px;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    h4 {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #97a2b5;
+    }
+
+    span {
+      font-size: 19px;
+      font-weight: 700;
+      color: #d1051d;
+      letter-spacing: -0.3px;
+    }
+  }
+}
