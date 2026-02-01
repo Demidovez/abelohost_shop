@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google';
 import './globals.scss';
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
+import { Menu } from '@/widgets/Menu';
 
 import { PageContainer } from './_components/PageContainer';
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
+        <Menu />
         <PageContainer>{children}</PageContainer>
         <Footer />
       </body>

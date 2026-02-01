@@ -1,0 +1,29 @@
+.container {
+  border-bottom: 2px solid #e5e9ee;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li a {
+      display: block;
+      padding: 23px 0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      color: #363b60;
+
+      span {
+        display: block;
+        border-bottom: 2px solid transparent;
+        transition: all 0.15s ease-in-out;
+      }
+
+      &:hover span {
+        border-bottom-color: #363b60;
+      }
+    }
+  }
+}
