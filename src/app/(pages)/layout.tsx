@@ -7,6 +7,8 @@ import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
 import { Menu } from '@/widgets/Menu';
 
+import { AuthProvider } from './_providers/AuthProvider';
+
 const montserrat = Montserrat({
   variable: '--font-accent',
   subsets: ['latin'],
@@ -26,15 +28,17 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <Header />
-        <Menu />
-        <main>
-          <ContentContainer>{children}</ContentContainer>
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={montserrat.className}>
+          <Header />
+          <Menu />
+          <main>
+            <ContentContainer>{children}</ContentContainer>
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </AuthProvider>
   );
 }

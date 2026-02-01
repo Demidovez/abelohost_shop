@@ -2,10 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Contacts } from '@/features/show-contacts';
+import { UserBar } from '@/features/show-user';
 import { PATHS } from '@/shared/constants';
 import { ContentContainer } from '@/shared/ui/ContentContainer';
-import { UserSolid } from '@/shared/ui/Icons';
-import { LinkWithIcon } from '@/shared/ui/LinkWithIcon';
 
 import styles from './Header.module.scss';
 
@@ -15,7 +14,7 @@ export const Header = () => {
       <div className={styles.top_header}>
         <ContentContainer className={styles.content}>
           <Contacts />
-          <LinkWithIcon href={PATHS.login} icon={<UserSolid />} label="Login" />
+          <UserBar />
         </ContentContainer>
       </div>
       <div className={styles.bottom_header}>

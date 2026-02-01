@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { api } from '@/shared/api';
+import { productsApi } from '../api/products';
 
 import type { Product } from './types/Product';
 
@@ -12,7 +12,7 @@ interface ProductsState {
 export const useProductsStore = create<ProductsState>((set) => ({
   products: [],
   fetchProducts: async () => {
-    const data = await api.productsApi.getProducts();
+    const data = await productsApi.getProducts();
     set({ products: data.products ?? [] });
   },
 }));

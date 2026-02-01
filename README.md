@@ -43,6 +43,17 @@ docker build -t abelohost-shop .
 docker run -p 3001:3000 --rm abelohost-shop
 ```
 
+### Demo users
+
+**Username**: emilys\
+**Password**: emilyspass
+
+**Username**: avat\
+**Password**: avatpass
+
+**Username**: evelyns\
+**Password**: evelynspass
+
 ---
 
 ## Ответы на вопросы

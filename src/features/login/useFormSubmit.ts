@@ -1,5 +1,8 @@
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
+import { useUserStore } from '@/entities/user';
+import { PATHS } from '@/shared/constants';
 import { toTitleCase } from '@/shared/helpers';
 
 const MIN_USERNAME_LENGTH = 3;
@@ -17,6 +20,9 @@ const getErrorLengthMessage = (field: string, minLength: number) => {
 };
 
 export const useFormSubmit = () => {
+  const userStore = useUserStore();
+  const router = useRouter();
+
   const [usernameError, setUsernameError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [submitError, setSubmitError] = useState('');
@@ -28,8 +34,8 @@ export const useFormSubmit = () => {
     setSubmitError('');
 
     try {
-      console.log(username, password);
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await userStore.login(username, password);
+      router.push(PATHS.home);
     } catch (error) {
       console.error(error);
       setSubmitError('An error occurred while logging in');
